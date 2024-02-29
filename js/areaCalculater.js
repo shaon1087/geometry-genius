@@ -11,6 +11,7 @@ function triangleCalculator() {
 
   const areaSpan = document.getElementById("triangle-area");
   areaSpan.innerText = triangleArea;
+  addToCalculationEntry("Triangle", triangleArea);
 }
 
 function rectangleCalculator() {
@@ -22,10 +23,11 @@ function rectangleCalculator() {
   const rectangleFieldText = rectangleFieldLength.value;
   const rectangleFieldLengthValue = parseFloat(rectangleFieldText);
 
-  const triangleArea = rectangleFieldWidthValue * rectangleFieldLengthValue;
+  const recTangleArea = rectangleFieldWidthValue * rectangleFieldLengthValue;
 
   const areaSpan = document.getElementById("rectangle-area");
-  areaSpan.innerText = triangleArea;
+  areaSpan.innerText = recTangleArea;
+  addToCalculationEntry("recTangle", recTangleArea);
 }
 
 function parallelogramCalculator() {
@@ -33,6 +35,17 @@ function parallelogramCalculator() {
   const parallelogramLength = getInputValueById("parallelogram-h");
   const parallelogramArea = parallelogramBase * parallelogramLength;
   setTextFieldText("parallelogram-area", parallelogramArea);
+
+  // add to calculationEntry
+  addToCalculationEntry("parallelogram", parallelogramArea);
+}
+
+function RhombusCalculator(){
+    const rhombusD1 = getInputValueById('Rhombus-d1');
+    const rhombusD2 = getInputValueById('Rhombus-d1');
+    const rhombusArea = rhombusD1 * 0.5 * rhombusD2;
+    setTextFieldText("Rhombus-area", rhombusArea);
+    addToCalculationEntry("Rhombus", rhombusArea);
 }
 
 function getInputValueById(inputId) {
@@ -45,4 +58,15 @@ function getInputValueById(inputId) {
 function setTextFieldText(areaId, area) {
   const TextArea = document.getElementById(areaId);
   TextArea.innerText = area;
+}
+
+// add to calculation entry
+function addToCalculationEntry(areaType,area){
+    const calculationEntry = document.getElementById('calculation-Entry');
+    const count =  calculationEntry.childElementCount;
+    const  p = document.createElement('p');
+    p.classList.add('my-4');
+    p.innerHTML = `${count+1}.${areaType} ${area} cm<sup>2</sup> <button class="btn btn-primary btn-sm">Convert</button>`;
+    calculationEntry.appendChild(p);
+
 }

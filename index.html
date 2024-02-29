@@ -88,11 +88,37 @@
               </div>
             </div>
           </div>
+          <!-- Rhombus -->
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure>
+              <img
+                src="images/rhombus.png"
+                alt=""
+              />
+            </figure>
+            <div class="card-body text-center">
+              <h2 class="card-title ">Rhombus</h2>
+              <p>Area(A) = 0.5 X d1 X d2</p>
+              <p>
+                <input class="border w-24 px- text-sm bg-slate-200" type="text"name="" id="Rhombus-d1" placeholder="d1">
+                <span class="ml-3">cm</span>
+                <input class="border w-24 px- text-sm bg-slate-200" type="text"name="" id="Rhombus-d2" placeholder="d2">
+                <span class="ml-2">cm</span>
+              </p>
+              <p class="text-2xl">Area : <span id="Rhombus-area">0</span>cm <sup>2</sup></p>
+              <div class="card-actions justify-center">
+                <button onclick="RhombusCalculator()" class="btn btn-primary px-10 mt-5">Calculate</button>
+              </div>
+            </div>
+          </div>
 
         </div>
         <!-- area calculator -->
         <div class="w-[437px]">
-          <div class="text-4xl">Area Calculator</div>
+          <div  class="text-4xl">Area Calculator</div>
+          <div id="calculation-Entry">
+
+          </div>
         </div>
       </div>
     </main>
