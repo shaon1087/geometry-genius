@@ -52,7 +52,7 @@
             </figure>
             <div class="card-body text-center">
               <h2 class="card-title ">Rectangle</h2>
-              <p>Area(A) = W X I </p>
+              <p>Area(A) = W X l </p>
               <p>
                 <input class="border w-24 px- text-sm bg-slate-200" type="text"name="" id="rectangle-width" placeholder="W">
                 <span class="ml-3">cm</span>
@@ -65,38 +65,30 @@
               </div>
             </div>
           </div>
-           <!-- shape-2-->
-           <div class="card w-96 bg-base-100 shadow-xl">
-            <figure>
-              <img
-                src="images/rectangle.png"
-                alt="Shoes"
-              />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
-              </div>
-            </div>
-          </div>
-            <!-- shape-3 -->
-            <div class="card w-96 bg-base-100 shadow-xl">
+          <!-- parallelogram -->
+          <div class="card w-96 bg-base-100 shadow-xl">
             <figure>
               <img
                 src="images/parallelogram.png"
-                alt="Shoes"
+                alt=""
               />
             </figure>
-            <div class="card-body">
-              <h2 class="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
+            <div class="card-body text-center">
+              <h2 class="card-title ">parallelogram</h2>
+              <p>Area(A) = b X h </p>
+              <p>
+                <input class="border w-24 px- text-sm bg-slate-200" type="text"name="" id="parallelogram-b" placeholder="b">
+                <span class="ml-3">cm</span>
+                <input class="border w-24 px- text-sm bg-slate-200" type="text"name="" id="parallelogram-h" placeholder="h">
+                <span class="ml-2">cm</span>
+              </p>
+              <p class="text-2xl">Area : <span id="parallelogram-area">0</span>cm <sup>2</sup></p>
+              <div class="card-actions justify-center">
+                <button onclick="parallelogramCalculator()" class="btn btn-primary px-10 mt-5">Calculate</button>
               </div>
             </div>
           </div>
+
         </div>
         <!-- area calculator -->
         <div class="w-[437px]">
